@@ -1,0 +1,362 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f6d66b;
+}
+
+
+.btn {
+  margin-top: 30px;
+  padding: 12px 28px;
+  border: 2px solid #ff6b6b;
+  background: transparent;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #ff6b6b;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff6b6b;
+  color: white;
+}
+
+
+
+Link {
+  text-underline-offset: none;
+  text-underline-position: none;
+  -ms-text-underline-position: none;
+}
+
+/* Product Cards */
+.product_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  min-height: 400px;
+}
+
+.card-margin {
+  margin: 10px;
+}
+
+/* Form Inputs Styling */
+input,
+textarea {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+input[type="submit"] {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #e55a5a;
+}
+
+/* GRID LAYOUT */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* CARD */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* BODY */
+.product-body {
+  margin-top: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.buy-btn {
+  background: #e63946;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.checkout-btn {
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.cart-item {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.cart-item button {
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+.hero-section {
+  margin-top: 70px; /* adjust to your navbar height */
+}
+.hero-section {
+  height: 100vh;
+  min-height: 600px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+              url('https://your-background-image.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-left h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.shop-now-btn {
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.shop-now-btn:hover {
+  transform: scale(1.05);
+  background: #ffd700;
+}
+
+/* Make sure products start after hero */
+.container {
+  padding-top: 60px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Default (desktop) */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Overlay (dark background when menu opens) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+/* Default desktop */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+}
+
+/* 📱 Mobile styles */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px; /* hidden off screen */
+    height: 100%;
+    width: 250px;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0; /* slide in */
+  }
+}
