@@ -5,7 +5,6 @@ import LearnMore from "./Components/LearnMore";
 import Signin from "./Components/Signin";
 import Signup from "./Components/Signup";
 import Cart from "./Components/Cart";
-import Addcloset from "./Components/AddCloset";
 import MpesaPayment from "./Components/MakePayments";
 import Navbar from "./Components/Navbar";
 /* ================= NAVBAR ================= */
@@ -45,7 +44,6 @@ function App() {
         <Route path="/learn" element={<LearnMore />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/addcloset" element={<Addcloset />} />
         <Route path="/makepayment" element={<MpesaPayment />} />
       </Routes>
     </HashRouter>

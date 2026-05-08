@@ -27,12 +27,14 @@ const Signin = () => {
         setSuccess(response.data.message)
         setLoading("")
         localStorage.setItem("user",JSON.stringify(response.data.user))
+        localStorage.setItem("isLoggedIn", "true")
         // navigation on successful sign in 
         navigate("/")
 
       }
       }catch (error){
-        setError(error)
+        setError(error.message || error)
+        setLoading("")
       }
   }
 
@@ -41,7 +43,7 @@ const Signin = () => {
     <div className='hero'>
     <div className='row justify-content-center'>
       <div className='card shadow m-2 p-4 col-md-6'>
-        <h1>SignIn</h1>
+        <h1>SIGN IN</h1>
         
         {loading}<br />
         {error}<br />

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Signup = () => {
   // declaring state varibles
@@ -13,6 +13,8 @@ const Signup = () => {
   const [loading, setLoading] = useState("")
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
+  const navigate = useNavigate()
+
   // function to submit
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -28,8 +30,14 @@ const Signup = () => {
       // adding BASE URL
       const response = await axios.post("https://peterson.alwaysdata.net/api/signup", formData);
       setSuccess(response.data.success)
+      localStorage.setItem("isLoggedIn", "true")
+      if (response.data.user) {
+        localStorage.setItem("user", JSON.stringify(response.data.user))
+      }
+      navigate("/")
     } catch (error) {
-      setError(error)
+      setError(error.message || error)
+      setLoading("")
     }
   }
 
@@ -39,7 +47,7 @@ const Signup = () => {
     <div className='hero'>
       <div className='row justify-content-center'>
         <div className='card shadow m-2 p-4 col-md-6'>
-          <h1>Sign up</h1>
+          <h1>SIGN UP</h1>
 
           {loading}<br />
           {error}<br />

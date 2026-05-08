@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 const AddCloset  = () => {
   // declaring state variables
@@ -32,7 +31,6 @@ setError(error.message)
   }
   }
 
-
   return (
     <div>
       <div className='row justify-content-center'>
@@ -41,9 +39,6 @@ setError(error.message)
       {loading}
       {success}
       {error}
-      <nav>
-        <Link to='/' className='btn '>GET CLOSET</Link>
-      </nav>
       <h1>add to closet</h1>
         <form action='' onSubmit={handleSubmit}>
         <input 
